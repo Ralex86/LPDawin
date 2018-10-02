@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class Voyage {
+	private String referenceVoyage;
+	private String libelleVoyage;
+	private ArrayList<Reservation> reservations;
+	private static int number = 0;
+	
+	public Voyage(String reference, String libelle) {
+		referenceVoyage = reference;
+		libelleVoyage = libelle;
+		reservations = new ArrayList<Reservation>();
+	}
+	
+	public String getReference() {
+		return referenceVoyage;
+	}
+	
+	public String getLibelle() {
+		return libelleVoyage;
+	}
+	
+	public void afficher() {
+		System.out.println();
+		System.out.println("Référence du voyage:" + referenceVoyage);
+		System.out.println("Libellé du voyage: " + libelleVoyage);
+	}
+}

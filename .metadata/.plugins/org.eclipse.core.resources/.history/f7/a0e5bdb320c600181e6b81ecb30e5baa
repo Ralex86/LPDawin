@@ -1,0 +1,20 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("---------TESTS DE TRAVELWORLD ----------");
+		Voyage v = new Voyage("1", "Premier voyage");
+		v.afficher();
+		
+		Sejour s = new Sejour(v, "Dublin");
+		s.afficher();
+		
+		Circuit c = new Circuit(v, true);
+		c.ajouterEtape(new Etape(1, "Barcelone", 1));
+		c.ajouterEtape(new Etape(2, "Melbourne", 3));
+		c.ajouterEtape(new Etape(3, "Eindhoven", 1));
+		c.ajouterEtape(new Etape(4, "Rio de Janeiro", -5));
+		c.afficher();
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class Etapes {
+	private int numeroEtape;
+	private String lieuEtape;
+	private int dureeEtape;
+	
+	public Etapes(int num, String lieu, int duree) {
+		numeroEtape = num;
+		lieuEtape = lieu;
+		dureeEtape = duree;
+	}
+}

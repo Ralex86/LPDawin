@@ -1,0 +1,9 @@
+
+public class Voyage {
+	private String referenceVoyage;
+	private String libelleVoyage;
+	
+	public void afficher() {
+		
+	}
+}

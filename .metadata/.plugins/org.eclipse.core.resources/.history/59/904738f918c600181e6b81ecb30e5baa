@@ -1,0 +1,10 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("---------TESTS DE TRAVELWORLD ----------");
+		Voyage v1 = new Voyage();
+
+	}
+
+}

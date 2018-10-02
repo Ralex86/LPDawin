@@ -1,0 +1,12 @@
+
+public class Sejour extends Voyage {
+	private String lieuSejour;
+	
+	public Sejour() {
+		
+	}
+	
+	public void afficher() {
+		super.afficher();
+	}
+}

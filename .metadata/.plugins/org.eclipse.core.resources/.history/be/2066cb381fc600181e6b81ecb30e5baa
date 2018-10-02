@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Client {
+	private int numClient;
+	private String nom;
+	private String prenom;
+	private ArrayList<Reservation> mesReservations;
+	
+	public Client(int num, String n, String p) {
+		numClient = num;
+		nom = n;
+		prenom = p;
+		mesReservations = new ArrayList<Reservation>();
+	}
+	
+	public void afficher() {
+		System.out.println();
+		System.out.println("Numéro de client: " + numClient);
+		System.out.println("Nom du client: " + nom);
+		System.out.println("Prénom du client: " + prenom);
+	}
+	
+	public void afficherListReaPassees() {
+		for (Reservation r : mesReservations)
+			r.afficher();
+	}
+}

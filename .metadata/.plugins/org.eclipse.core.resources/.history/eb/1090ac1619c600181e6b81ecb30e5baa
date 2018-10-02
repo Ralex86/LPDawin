@@ -1,0 +1,19 @@
+
+public class Voyage {
+	private String referenceVoyage;
+	private String libelleVoyage;
+	
+	public Voyage() {
+		
+	}
+	
+	public Voyage(String reference, String libelle) {
+		referenceVoyage = reference;
+		libelleVoyage = libelle;
+	}
+	
+	public void afficher() {
+		System.out.println("Référence du voyage:" + referenceVoyage);
+		System.out.println("Libellé du voyage: " + libelleVoyage);
+	}
+}

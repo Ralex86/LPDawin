@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class Circuit extends Voyage {
+	private boolean enAutonomie;
+	private ArrayList<Etape> etapes;
+	
+	public Circuit(String reference, String libelle, boolean autonomie) {
+		super(reference, libelle);
+		enAutonomie = autonomie;
+		etapes = new ArrayList<Etape>();
+	}
+	
+	public void afficher() {
+		super.afficher();
+		System.out.println("Circuit en autonomie: " + (enAutonomie ? "Oui" : "Non"));
+		System.out.println(" -- Liste des étapes -- ");
+		for (Etape e : etapes)
+			e.afficher();
+	}
+	
+	public void ajouterEtape(Etape etape) {
+		etapes.add(etape);
+	}
+}

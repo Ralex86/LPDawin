@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Client {
+	private int numClient;
+	private String nom;
+	private String prenom;
+	private ArrayList<Reservation> mesReservations;
+	
+	public Client(int num, String n, String p) {
+		numClient = num;
+		nom = n;
+		prenom = p;
+		mesReservations = new ArrayList<Reservation>();
+	}
+	
+	public void afficher() {
+		System.out.println();
+		System.out.println("Numéro de client: " + numClient);
+		System.out.println("Nom du client: " + nom);
+		System.out.println("Prénom du client: " + prenom);
+	}
+	
+	public void afficherListReaPassees() {
+		Date d = new Date();
+		for (Reservation r : mesReservations) {
+			if (r.getDateRetour().before(d))
+				r.afficher();
+		}
+	}
+	
+	public void afficherListReaEnCours() {
+		Date d = new Date();
+		for (Reservation r : mesReservations) {
+			if (r.getDateDepart().after(d) && r.getDateRetour().before(d))
+				r.afficher();
+		}
+	}
+	
+	public void afficherListReaAVenir() {
+		Date d = new Date();
+		for (Reservation r : mesReservations) {
+			if (r.getDateDepart().before(d))
+				r.afficher();
+		}
+	}
+}

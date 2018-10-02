@@ -1,0 +1,18 @@
+
+public class Sejour extends Voyage {
+	private String lieuSejour;
+	
+	public Sejour(Voyage v, String lieu) {
+		new Sejour(v.getReference, v.getLibelle, lieu);
+	}
+	
+	public Sejour(String reference, String libelle, String lieu) {
+		super(reference, libelle);
+		lieuSejour = lieu;
+	}
+	
+	public void afficher() {
+		super.afficher();
+		System.out.println("Lieu du séjour: " + lieuSejour);
+	}
+}

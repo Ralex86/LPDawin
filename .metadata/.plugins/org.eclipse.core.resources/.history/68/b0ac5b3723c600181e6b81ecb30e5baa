@@ -1,0 +1,39 @@
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("---------TESTS DE TRAVELWORLD ----------");
+		System.out.println("Date du jour: " + (new Date()));
+		Voyage v = new Voyage("1", "Premier voyage");
+		v.afficher();
+		
+		Sejour s = new Sejour(v, "Dublin");
+		s.afficher();
+		
+		Circuit c = new Circuit(v, true);
+		c.ajouterEtape(new Etape(1, "Barcelone", 1));
+		c.ajouterEtape(new Etape(2, "Melbourne", 3));
+		c.ajouterEtape(new Etape(3, "Eindhoven", 1));
+		c.ajouterEtape(new Etape(4, "Rio de Janeiro", -5));
+		c.afficher();
+		
+		Client cl = new Client("", "Tibo");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		try {
+			cl.ajouterReservation(new Reservation(dateFormat.parse("15/11/2018"), dateFormat.parse("12/05/2019"), true, c));
+			cl.ajouterReservation(new Reservation(dateFormat.parse("30/09/2018"), dateFormat.parse("18/10/2018"), true, v));
+			cl.ajouterReservation(new Reservation(dateFormat.parse("05/02/2017"), dateFormat.parse("19/09/2018"), true, s));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		cl.afficher();
+		cl.afficherListResaAVenir();
+		cl.afficherListResaEnCours();
+		cl.afficherListResaPassees();
+	}
+
+}

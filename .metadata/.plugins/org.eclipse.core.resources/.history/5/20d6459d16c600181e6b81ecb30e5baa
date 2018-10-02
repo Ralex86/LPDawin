@@ -1,0 +1,14 @@
+
+public class Voyage {
+	private String referenceVoyage;
+	private String libelleVoyage;
+	
+	public Voyage(String reference, String libelle) {
+		referenceVoyage = reference;
+		libelleVoyage = libelle;
+	}
+	
+	public void afficher() {
+		
+	}
+}

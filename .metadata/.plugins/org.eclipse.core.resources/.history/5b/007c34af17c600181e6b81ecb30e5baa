@@ -1,0 +1,18 @@
+
+public class Etapes {
+	private int numeroEtape;
+	private String lieuEtape;
+	private int dureeEtape;
+	
+	public Etapes(int num, String lieu, int duree) {
+		numeroEtape = num;
+		lieuEtape = lieu;
+		dureeEtape = duree;
+	}
+	
+	public void afficher() {
+		System.out.println("Numéro de l'étape: " + numeroEtape);
+		System.out.println("Lieu de l'étape: " + lieuEtape);
+		System.out.println("Durée de l'étape: " + dureeEtape);
+	}
+}
