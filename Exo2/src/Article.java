@@ -13,6 +13,10 @@ public class Article {
 		prix = p;
 	}
 	
+	public UUID getReference() {
+		return reference;
+	}
+	
 	public boolean retirer(int q) {
 		if (qteStock - q > 0) {
 			qteStock -= q;
