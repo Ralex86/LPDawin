@@ -1,0 +1,31 @@
+<!-- KIT DE SURVIE JS - IUT INFORMATIQUE BORDEAUX -->
+<!DOCTYPE html>
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Exercice 02</title>
+    <meta name="description" content="Description de la page">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <style>
+    	body{ font-family: 'Quicksand', sans-serif; }
+	</style>
+
+    <script>
+    var etu = {
+      nom: "Massu",
+      prenom: "Thibault",
+      num: 1,
+      naissance: [15, 11, 1998],
+      toString: function() {
+        return "Je suis " + this.prenom + " " + this.nom + " avec le numéro: " +
+          this.num + " né le: " + this.naissance[0] + "-" + this.naissance[1] + "-"
+          + this.naissance[2];
+      }
+    }
+    console.log(etu.toString());
+    </script>
+</head>
+<body></body>
+</html>
